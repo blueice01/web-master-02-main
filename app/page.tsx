@@ -41,7 +41,7 @@ export default function Home() {
     </video>
     <div className="absolute bottom-0 left-0 right-0" style={{ height: '20rem', background: 'linear-gradient(to top, black, rgba(0, 0, 0, 0))' }}></div>
     <div className="absolute top-0 bottom-0" style={{ left: 'calc(100% * 5 / 9)', width: '10rem', height: '100%', filter: 'blur(10px)', background: 'black', opacity: 1 }}></div>
-  </div>
+</div>
   <div className="container relative px-4 md:px-6 space-y-10 xl:space-y-16">
     <div className="grid max-w-[1300px] mx-auto gap-4 px-4 sm:px-6 md:px-10 md:grid-cols-2 md:gap-16 items-center">
       <div className="flex flex-col justify-center items-center text-center">
@@ -53,11 +53,13 @@ export default function Home() {
           3D Art 포트폴리오
         </p>
         <a
-  href="https://www.artstation.com/user-4854839"
-  className="mt-6 inline-block px-8 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 transition-colors duration-300 bg-white hover:bg-gray-200 active:bg-purple-400"
->
-  아트스테이션
-</a>
+          href="https://www.artstation.com/user-4854839"
+          className="mt-6 inline-block px-8 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 transition-colors duration-300 bg-white hover:bg-gray-200 active:bg-purple-400"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          아트스테이션
+        </a>
       </div>
       <img
         alt="Hero"
@@ -270,17 +272,17 @@ export default function Home() {
         답장이 느립니다.
       </p>
     </div>
-    <div className="mx-auto w-full max-w-sm space-y-4">
+    <div className="mx-auto w-full max-w-lg space-y-4">
       <form className="flex flex-col space-y-6">
         <Input className="max-w-lg flex-1" placeholder="이름" type="Name" />
         <Input className="max-w-lg flex-1" placeholder="이메일" type="Email" />
         <Textarea className="max-w-lg flex-1" placeholder="메시지" />
         <Button 
-  type="button" 
-  style={{cursor: 'not-allowed' }} 
->
-  메시지 보내기
-</Button>
+          type="button" 
+          style={{cursor: 'not-allowed' }} 
+        >
+          메시지 보내기
+        </Button>
       </form>
     </div>
   </div>
