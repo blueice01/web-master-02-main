@@ -9,23 +9,23 @@ import { Button } from "@/components/ui/button"
 export default function Home() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <header className="px-4 lg:px-6 h-14 flex items-center bg-gray-900 text-gray-50 shadow">
-        <Link className="flex items-center justify-center" href="#">
-          <MountainIcon className="h-6 w-6" />
-          <span className="sr-only">Portfolio</span>
-        </Link>
-        <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#about">
-            대표 작품
-          </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#projects">
-            프로젝트
-          </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#contact">
-            연락처
-          </Link>
-        </nav>
-      </header>
+  <header className="px-4 lg:px-6 h-14 flex items-center bg-gray-900 text-gray-50 shadow">
+  <div className="flex items-center justify-center">
+  <img src="img/articon.png" alt="Portfolio" className="h-8 w-8" />
+  <span className="sr-only">Portfolio</span>
+</div>
+    <nav className="ml-auto flex gap-4 sm:gap-6">
+      <Link className="text-sm font-medium hover:underline underline-offset-4" href="#about">
+        대표 작품
+      </Link>
+      <Link className="text-sm font-medium hover:underline underline-offset-4" href="#projects">
+        프로젝트
+      </Link>
+      <Link className="text-sm font-medium hover:underline underline-offset-4" href="#contact">
+        연락처
+      </Link>
+    </nav>
+  </header>
       <main className="flex-1">
       <section className="relative w-full pt-12 md:pt-24 lg:pt-32 lg:pb-32 bg-black text-gray-50 flex justify-center">
   <div className="absolute inset-0 w-full h-full flex justify-start">
@@ -54,7 +54,7 @@ export default function Home() {
         </p>
         <a
   href="https://www.artstation.com/user-4854839"
-  className="mt-6 inline-block px-8 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 transition-colors duration-300 bg-gray-500 hover:bg-gray-200 active:bg-navy-blue"
+  className="mt-6 inline-block px-8 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 transition-colors duration-300 bg-white hover:bg-gray-200 active:bg-purple-400"
 >
   아트스테이션
 </a>
@@ -262,24 +262,29 @@ export default function Home() {
     </div>
   </div>
 </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 lg:pb-32 bg-gray-100 dark:bg-gray-800 flex justify-center" id="contact" style={{ background: "linear-gradient(#1D232C, #000000)" }}>
-          <div className="container grid items-center justify-center gap-4 px-4 md:px-6">
-            <div className="space-y-3">
-              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight text-white text-center">문의</h2>
-              <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 text-center">
-                답장이 느립니다.
-              </p>
-            </div>
-            <div className="mx-auto w-full max-w-sm space-y-2">
-              <form className="flex flex-col space-y-2">
-                <Input className="max-w-lg flex-1" placeholder="이름" type="Name" />
-                <Input className="max-w-lg flex-1" placeholder="이메일" type="Email" />
-                <Textarea className="max-w-lg flex-1" placeholder="메시지" />
-                <Button type="submit">메시지 보내기</Button>
-              </form>
-            </div>
-          </div>
-        </section>
+<section className="w-full py-16 md:py-28 lg:py-36 lg:pb-36 bg-gray-100 dark:bg-gray-800 flex justify-center" id="contact" style={{ background: "linear-gradient(#1D232C, #000000)" }}>
+  <div className="container grid items-center justify-center gap-6 px-6 md:px-8">
+    <div className="space-y-4">
+      <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight text-white text-center">문의</h2>
+      <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 text-center">
+        답장이 느립니다.
+      </p>
+    </div>
+    <div className="mx-auto w-full max-w-sm space-y-4">
+      <form className="flex flex-col space-y-6">
+        <Input className="max-w-lg flex-1" placeholder="이름" type="Name" />
+        <Input className="max-w-lg flex-1" placeholder="이메일" type="Email" />
+        <Textarea className="max-w-lg flex-1" placeholder="메시지" />
+        <Button 
+  type="button" 
+  style={{cursor: 'not-allowed' }} 
+>
+  메시지 보내기
+</Button>
+      </form>
+    </div>
+  </div>
+</section>
       </main>
       <footer className="bg-gray-900 text-gray-50 p-6 md:py-12 w-full">
   <Link id="scrollToTopLink" className="scroll-to-top flex items-center justify-center" href="#">
