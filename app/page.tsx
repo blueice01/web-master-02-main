@@ -12,17 +12,17 @@ export default function Home() {
   <header className="px-4 lg:px-6 h-14 flex items-center bg-gray-900 text-gray-50 shadow">
   <div className="flex items-center justify-center">
   <img src="img/articon.png" alt="Portfolio" className="h-8 w-8" />
-  <span className="sr-only">Portfolio</span>
+  <span className="sr-only">포트폴리오</span>
 </div>
     <nav className="ml-auto flex gap-4 sm:gap-6">
       <Link className="text-sm font-medium hover:underline underline-offset-4" href="#about">
-        대표 작품
+        본인 소개
       </Link>
       <Link className="text-sm font-medium hover:underline underline-offset-4" href="#projects">
-        프로젝트
+       3D 작업
       </Link>
       <Link className="text-sm font-medium hover:underline underline-offset-4" href="#contact">
-        연락처
+        문의
       </Link>
     </nav>
   </header>
@@ -273,17 +273,26 @@ export default function Home() {
       </p>
     </div>
     <div className="mx-auto w-full max-w-lg space-y-4">
-      <form className="flex flex-col space-y-6">
-        <Input className="max-w-lg flex-1" placeholder="이름" type="Name" />
-        <Input className="max-w-lg flex-1" placeholder="이메일" type="Email" />
-        <Textarea className="max-w-lg flex-1" placeholder="메시지" />
+    <form className="flex flex-col space-y-6">
+    <div style={{ maxWidth: 'calc(100% + 300px)', marginLeft: '-150px', marginRight: '-150px' }}>
+        <Input className="w-full flex-1" placeholder="이름" type="Name" />
+    </div>
+    <div style={{ maxWidth: 'calc(100% + 300px)', marginLeft: '-150px', marginRight: '-150px' }}>
+        <Input className="w-full flex-1" placeholder="이메일" type="Email" />
+    </div>
+    <div style={{ maxWidth: 'calc(100% + 300px)', marginLeft: '-150px', marginRight: '-150px' }}>
+        <Textarea className="w-full flex-1" placeholder="메시지" />
+    </div>
+    <div style={{ maxWidth: 'calc(100% + 300px)', marginLeft: '-150px', marginRight: '-150px' }}>
         <Button 
           type="button" 
-          style={{cursor: 'not-allowed' }} 
+          style={{ cursor: 'not-allowed', width: '100%' }} 
         >
           메시지 보내기
         </Button>
-      </form>
+    </div>
+</form>
+
     </div>
   </div>
 </section>
